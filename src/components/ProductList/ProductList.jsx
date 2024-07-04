@@ -26,6 +26,7 @@ const ProductList = () => {
     const {tg, queryId} = useTelegram();
 
     const onSendData = useCallback(() => {
+        console.log(addedItems);
         const data = {
             products: addedItems,
             totalPrice: getTotalPrice(addedItems),
@@ -78,6 +79,7 @@ const ProductList = () => {
                     className={'item'}
                 />
             ))}
+            <Button onClick={() => onSendData()}>Rrghjgj</Button>
         </div>
     );
 };
